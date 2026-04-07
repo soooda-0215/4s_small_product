@@ -1,0 +1,80 @@
+\hypertarget{timer_8c}{}\doxysection{timer.\+c File Reference}
+\label{timer_8c}\index{timer.c@{timer.c}}
+
+
+タイマーの制御モジュール  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$h8/reg3067.\+h$>$}\newline
+{\ttfamily \#include $<$mes2.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}timer.\+h\char`\"{}}\newline
+Include dependency graph for timer.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{timer_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{timer_8c_a66521d44b8434efc305be23d5a20399a}\label{timer_8c_a66521d44b8434efc305be23d5a20399a}} 
+\mbox{\hyperlink{structtimerv}{timervp}} \mbox{\hyperlink{timer_8c_a66521d44b8434efc305be23d5a20399a}{timer\+\_\+get\+\_\+timerv0}} (void)
+\begin{DoxyCompactList}\small\item\em タイマー0のカウンターオブジェクト取得 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{timer_8c_ab26ae3ce5b73f02202c4c0496070ea18}{init\+\_\+timer0}} (int compare, void($\ast$timer\+\_\+handler\+\_\+body)(void))
+\begin{DoxyCompactList}\small\item\em タイマー0の初期化 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{timer_8c_ae385024d031aed746aff338044a27870}{set\+\_\+period\+\_\+timer0}} (int compare)
+\begin{DoxyCompactList}\small\item\em タイマー0のハンドラー起動間隔の設定 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{timer_8c_afcc82992986f74b4bc482ef3428258d0}\label{timer_8c_afcc82992986f74b4bc482ef3428258d0}} 
+void \mbox{\hyperlink{timer_8c_afcc82992986f74b4bc482ef3428258d0}{start\+\_\+timer0}} (void)
+\begin{DoxyCompactList}\small\item\em タイマー0をスタートする。 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{timer_8c_a72f2301d64f134472e5ce73d236edb71}\label{timer_8c_a72f2301d64f134472e5ce73d236edb71}} 
+void \mbox{\hyperlink{timer_8c_a72f2301d64f134472e5ce73d236edb71}{stop\+\_\+timer0}} (void)
+\begin{DoxyCompactList}\small\item\em タイマー0を停止する。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+タイマーの制御モジュール 
+
+\begin{DoxyAuthor}{Author}
+Yuji KATSUTA, Makoto TANABE 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{timer_8c_ab26ae3ce5b73f02202c4c0496070ea18}\label{timer_8c_ab26ae3ce5b73f02202c4c0496070ea18}} 
+\index{timer.c@{timer.c}!init\_timer0@{init\_timer0}}
+\index{init\_timer0@{init\_timer0}!timer.c@{timer.c}}
+\doxysubsubsection{\texorpdfstring{init\_timer0()}{init\_timer0()}}
+{\footnotesize\ttfamily void init\+\_\+timer0 (\begin{DoxyParamCaption}\item[{int}]{compare,  }\item[{void($\ast$)(void)}]{timer\+\_\+handler\+\_\+body }\end{DoxyParamCaption})}
+
+
+
+タイマー0の初期化 
+
+タイマー0の初期化を行います。指定した時間間隔ごとにハンドラーを呼び出し、timervオブジェクトのcount値を増やす。 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em compare} & ハンドラーの起動間隔（コンペアマッチの値） \\
+\hline
+\mbox{\texttt{ in}}  & {\em timer\+\_\+handler\+\_\+body} & 起動されるハンドラー \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{timer_8c_ae385024d031aed746aff338044a27870}\label{timer_8c_ae385024d031aed746aff338044a27870}} 
+\index{timer.c@{timer.c}!set\_period\_timer0@{set\_period\_timer0}}
+\index{set\_period\_timer0@{set\_period\_timer0}!timer.c@{timer.c}}
+\doxysubsubsection{\texorpdfstring{set\_period\_timer0()}{set\_period\_timer0()}}
+{\footnotesize\ttfamily void set\+\_\+period\+\_\+timer0 (\begin{DoxyParamCaption}\item[{int}]{compare }\end{DoxyParamCaption})}
+
+
+
+タイマー0のハンドラー起動間隔の設定 
+
+タイマー0がハンドラーを起動する時間間隔をコンペアマッチ値で指定する。
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em compare} & ハンドラーの起動間隔（コンペアマッチの値） \\
+\hline
+\end{DoxyParams}

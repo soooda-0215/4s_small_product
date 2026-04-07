@@ -1,0 +1,67 @@
+\hypertarget{nled_8c}{}\doxysection{nled.\+c File Reference}
+\label{nled_8c}\index{nled.c@{nled.c}}
+
+
+数値\+LEDの制御モジュール  
+
+
+{\ttfamily \#include \char`\"{}nled.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$h8/reg3067.\+h$>$}\newline
+{\ttfamily \#include $<$mes2.\+h$>$}\newline
+Include dependency graph for nled.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{nled_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{nled_8c_adae6d8815875f8dcd698729b44ef3ac4}\label{nled_8c_adae6d8815875f8dcd698729b44ef3ac4}} 
+\#define {\bfseries H8\+\_\+H}
+\item 
+\mbox{\Hypertarget{nled_8c_aca7d5718ab8c38506adb3bef2469b319}\label{nled_8c_aca7d5718ab8c38506adb3bef2469b319}} 
+\#define {\bfseries MOD}~10
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{nled_8c_a77c2f95c8efe8839ca64c5e9646258ae}{number\+\_\+led}} (int n)
+\begin{DoxyCompactList}\small\item\em 数値\+LED点灯関数 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{nled_8c_a2fa6db7ce33e0223b7c10848424198f0}\label{nled_8c_a2fa6db7ce33e0223b7c10848424198f0}} 
+void \mbox{\hyperlink{nled_8c_a2fa6db7ce33e0223b7c10848424198f0}{number\+\_\+led\+\_\+off}} (void)
+\begin{DoxyCompactList}\small\item\em 7セグの表示オフ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+数値\+LEDの制御モジュール 
+
+\begin{DoxyAuthor}{Author}
+Yuji KATSUTA, Makoto TANABE 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{nled_8c_a77c2f95c8efe8839ca64c5e9646258ae}\label{nled_8c_a77c2f95c8efe8839ca64c5e9646258ae}} 
+\index{nled.c@{nled.c}!number\_led@{number\_led}}
+\index{number\_led@{number\_led}!nled.c@{nled.c}}
+\doxysubsubsection{\texorpdfstring{number\_led()}{number\_led()}}
+{\footnotesize\ttfamily void number\+\_\+led (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+数値\+LED点灯関数 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em n} & 表示する数値\\
+\hline
+\end{DoxyParams}
+詳細説明
+\begin{DoxyItemize}
+\item 数値\+LED点灯関数
+\item MOD によりダイナミック表示切替え時間を制御 
+\end{DoxyItemize}

@@ -1,0 +1,52 @@
+\hypertarget{led_8h}{}\doxysection{led.\+h File Reference}
+\label{led_8h}\index{led.h@{led.h}}
+
+
+LEDの制御モジュール(ヘッダー)  
+
+
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=121pt]{led_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{led_8h_a625362537f3c9fe773b09246621a988d}{led}} (int n)
+\begin{DoxyCompactList}\small\item\em LED点灯関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+LEDの制御モジュール(ヘッダー) 
+
+\begin{DoxyAuthor}{Author}
+Yuji KATSUTA, Makoto TANABE 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{led_8h_a625362537f3c9fe773b09246621a988d}\label{led_8h_a625362537f3c9fe773b09246621a988d}} 
+\index{led.h@{led.h}!led@{led}}
+\index{led@{led}!led.h@{led.h}}
+\doxysubsubsection{\texorpdfstring{led()}{led()}}
+{\footnotesize\ttfamily void led (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+LED点灯関数 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em n} & 2進表示する数値\\
+\hline
+\end{DoxyParams}
+詳細説明
+\begin{DoxyItemize}
+\item LED点灯関数
+\item bit4が使用できないので、
+\item bit4を除いた7bitで2進数表示 
+\end{DoxyItemize}

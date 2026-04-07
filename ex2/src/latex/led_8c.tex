@@ -1,0 +1,56 @@
+\hypertarget{led_8c}{}\doxysection{led.\+c File Reference}
+\label{led_8c}\index{led.c@{led.c}}
+
+
+LEDの制御モジュール  
+
+
+{\ttfamily \#include \char`\"{}led.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$h8/reg3067.\+h$>$}\newline
+{\ttfamily \#include $<$mes2.\+h$>$}\newline
+Include dependency graph for led.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{led_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{led_8c_a625362537f3c9fe773b09246621a988d}{led}} (int n)
+\begin{DoxyCompactList}\small\item\em LED点灯関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+LEDの制御モジュール 
+
+\begin{DoxyAuthor}{Author}
+Yuji KATSUTA, Makoto TANABE 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{led_8c_a625362537f3c9fe773b09246621a988d}\label{led_8c_a625362537f3c9fe773b09246621a988d}} 
+\index{led.c@{led.c}!led@{led}}
+\index{led@{led}!led.c@{led.c}}
+\doxysubsubsection{\texorpdfstring{led()}{led()}}
+{\footnotesize\ttfamily void led (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+LED点灯関数 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em n} & 2進表示する数値\\
+\hline
+\end{DoxyParams}
+詳細説明
+\begin{DoxyItemize}
+\item LED点灯関数
+\item bit4が使用できないので、
+\item bit4を除いた7bitで2進数表示 
+\end{DoxyItemize}
