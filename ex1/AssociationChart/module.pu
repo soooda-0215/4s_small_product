@@ -1,0 +1,25 @@
+@startuml
+'可視性をアイコン化しない
+skinparam classAttributeIconSize 0
+
+'クラスと属性・操作の定義
+class main {
+  -init(void): void
+}
+
+
+class led {
+  +led(int) : void
+}
+
+class nled {
+  -MOD : int = 「ダイナミック点灯調整用数値」
+  +number_led(int): void
+  +number_led_off(void): void
+}
+
+
+'関連
+main --> led
+main -d-> nled
+@enduml

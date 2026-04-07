@@ -1,0 +1,13 @@
+@startuml
+left to right direction
+
+actor :ユーザー: as user
+
+package V0 {
+    usecase "LEDを点滅する" as L1
+    usecase "数値LEDに表示する数値を増やす" as N1
+}
+
+user --> L1
+user --> N1
+@enduml

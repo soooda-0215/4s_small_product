@@ -1,0 +1,24 @@
+@startuml
+autonumber
+participant OS
+participant main
+participant led
+
+autoactivate on
+
+
+[-> main : プログラム開始
+
+'loop	メインループ
+main -> main : 初期化
+return
+group	繰返し
+main -> led : LEDを点灯する
+return
+main->main : LEDの点灯パターンを反転する
+return
+main->main : 時間稼ぎ
+return
+end
+return プログラム終了
+@enduml

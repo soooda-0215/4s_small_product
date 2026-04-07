@@ -1,0 +1,11 @@
+@startuml
+left to right direction
+
+actor :ユーザー: as user
+
+package main {
+    usecase "LEDを点滅する" as L1
+}
+
+user --> L1
+@enduml

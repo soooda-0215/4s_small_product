@@ -1,0 +1,24 @@
+@startuml
+autonumber
+participant OS
+participant main
+participant led
+
+autoactivate on
+
+
+[-> main : プログラム開始
+
+'loop	メインループ
+main -> main : int pattern = 0xff
+return
+group	繰返し
+main -> led : led(pattern)
+return
+main->main : patternをbit反転する
+return
+main->main : my_sleep()
+return
+end
+return プログラム終了
+@enduml
