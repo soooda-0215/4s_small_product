@@ -1,0 +1,40 @@
+@startuml
+'可視性をアイコン化しない
+skinparam classAttributeIconSize 0
+
+'クラスと属性・操作の定義
+class main {
+  -init(void): void
+}
+
+
+class led {
+  +led(int) : void
+}
+
+class nled {
+  -MOD : int = 「ダイナミック点灯調整用数値」
+  +number_led(int): void
+  +number_led_off(void): void
+}
+
+class timer {
+  + SYSCLOCK : int = 「クロック周波数」
+  + SYSCLOCL_1000 : int = 「1ミリ秒間のクロック振動数」
+  + COUNT_100MSEC : int = 「1カウントが100ミリ秒となる値」 
+  - t0v: timerv
+  - timer0_handler_body: 関数ポインタ 
+
+  + init_timer0(int, 関数ポインタ): void
+  + start_timer0(void): void
+  + stop_timer0(void): void
+  + timer_get_timerv0(void): timerv *
+  - timer_handler0(void): void
+}
+
+
+'関連
+main --> led
+main -d-> nled
+main -u-> timer
+@enduml

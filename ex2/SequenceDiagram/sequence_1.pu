@@ -1,0 +1,56 @@
+@startuml
+autonumber
+participant main
+participant led
+participant nled
+participant timer
+
+autoactivate on
+
+[-> main : プログラム開始
+
+' 並列処理（mainとtimer）
+
+
+par タイマー処理
+  note right of timer
+    main の start() によって開始し、\n
+    main の stop() によって終了する
+  end note
+
+  loop 毎回200カウントごと
+    timer -> timer : count++
+    return
+  end
+
+else メイン処理
+
+main -> main : 初期化
+  main -> timer : init(200, NULL)
+  return
+return
+main -> timer : start()
+return
+
+
+  main -> led : LEDを点灯する(点灯パターン)
+  return
+
+  group  
+    main -> timer : timer_get_timerv0()->count
+    return : count
+    alt count >= 100
+        break
+        end
+    end
+    main -> nled : 数値LEDをダイナミック点灯する(数値++)
+    return
+  end
+
+  main -> led : off
+  main -> nled : off
+  main -> timer : stop
+  return プログラム終了
+end
+
+@enduml
